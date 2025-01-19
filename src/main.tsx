@@ -18,14 +18,16 @@ const router = createBrowserRouter([
       },
       {
         path: '/repos/:username',
-        element: <Repos/>
+        element: <Repos />
       }
     ],
   },
-]);
+],
+  { basename: "/github-finder" }
+);
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <RouterProvider router={router}/>
+    <RouterProvider router={router} />
   </StrictMode>,
 )
